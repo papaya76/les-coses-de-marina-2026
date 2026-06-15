@@ -1,0 +1,27 @@
+/* Definició de la paleta de colors i estils generals del document */
+body {
+    background-color: #fdfbf7; /* Color de fons secundari (blanc trencat) */
+    color: #343a40; /* Color del text principal (gris fosc) */
+}
+
+/* Estilització d'elements d'acció amb el color principal HEX */
+.btn-dark {
+    background-color: #8b0000; /* Bordeus */
+    border-color: #8b0000;
+}
+
+/* Aplicació de la pseudo-classe :hover per millorar el retorn d'interacció */
+.btn-dark:hover {
+    background-color: #6a0000; /* Bordeus enfosquit per a l'estat actiu */
+    border-color: #6a0000;
+}
+
+/* Colors d'enllaços hipertextuals */
+a {
+    color: #8b0000;
+}
+
+a:hover {
+    color: #d4af37; /* Daurat apagat per a un contrast òptim */
+    text-decoration: none;
+}
