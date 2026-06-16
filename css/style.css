@@ -1,27 +1,75 @@
-/* Definició de la paleta de colors i estils generals del document */
+/* ==========================================================================
+   1. TIPOGRAFIA I FONS GLOBAL
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
 body {
-    background-color: #fdfbf7; /* Color de fons secundari (blanc trencat) */
-    color: #343a40; /* Color del text principal (gris fosc) */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fdfbf7;
+    color: #333333;
 }
 
-/* Estilització d'elements d'acció amb el color principal HEX */
-.btn-dark {
-    background-color: #8b0000; /* Bordeus */
+/* ==========================================================================
+   2. ANIMACIÓ D'ENTRADA (FADE IN)
+   ========================================================================== */
+/* Fa que el contingut aparegui suaument de baix cap a dalt en carregar la pàgina */
+header, section, main, footer {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   3. BARRA DE NAVEGACIÓ (EFECTES HOVER)
+   ========================================================================== */
+.navbar-nav .nav-link {
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #8b0000 !important;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   4. BOTONS I TARGETES (SOMBRES DINÀMIQUES)
+   ========================================================================== */
+.btn {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 8px;
+}
+
+/* Efecte d'elevació tipus "Apple" en passar el ratolí */
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Les targetes (com la del formulari o mapes) també s'eleven una mica */
+.shadow-sm {
+    transition: box-shadow 0.3s ease;
+}
+
+.shadow-sm:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* ==========================================================================
+   5. FORMULARIS (FOCUS)
+   ========================================================================== */
+/* Quan l'usuari clica per escriure, la vora canvia al color corporatiu */
+.form-control:focus {
     border-color: #8b0000;
-}
-
-/* Aplicació de la pseudo-classe :hover per millorar el retorn d'interacció */
-.btn-dark:hover {
-    background-color: #6a0000; /* Bordeus enfosquit per a l'estat actiu */
-    border-color: #6a0000;
-}
-
-/* Colors d'enllaços hipertextuals */
-a {
-    color: #8b0000;
-}
-
-a:hover {
-    color: #d4af37; /* Daurat apagat per a un contrast òptim */
-    text-decoration: none;
+    box-shadow: 0 0 0 0.25rem rgba(139, 0, 0, 0.15);
+    outline: none;
 }
