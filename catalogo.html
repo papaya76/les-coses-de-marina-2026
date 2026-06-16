@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <!-- Etiqueta indispensable per garantir el comportament responsiu en dispositius mòbils -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catàleg | Les coses de Marina</title>
+
+    <!-- Integració del framework CSS Bootstrap 5 mitjançant CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Enllaç a la fulla d'estils en cascada (CSS) personalitzada -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Estils interns per gestionar l'estat actiu dels botons de filtre -->
+    <style>
+        .nav-pills .nav-link.active {
+            background-color: #8b0000 !important;
+            color: white !important;
+        }
+        .nav-pills .nav-link {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- BARRA DE NAVEGACIÓ RESPONSIU I FIXA -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top" style="background-color: #fdfbf7;">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.png" alt="Logo Les coses de Marina" height="50">
+                <span class="ms-2 fw-bold" style="color: #8b0000;">Les coses de Marina</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#NavegacioPrincipal" aria-controls="NavegacioPrincipal" aria-expanded="false" aria-label="Desplegar navegació">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="NavegacioPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inici</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" style="color: #8b0000;" href="catalogo.html">Catàleg</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">La botiga</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ubicacion.html">Ubicació</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacte</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CAPÇALERA DEL CATÀLEG -->
+    <header class="container mt-5 text-center">
+        <h1 class="display-5 fw-bold" style="color: #8b0000;">El Nostre Catàleg</h1>
+        <p class="lead text-muted">Descobreix tota la nostra col·lecció. Troba la teva talla perfecta, sense excepcions.</p>
+    </header>
+
+    <!-- PESTANYES DE FILTRATGE VISUAL -->
+    <div class="container mt-4">
+        <ul class="nav nav-pills justify-content-center mb-5" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active boto-filtre" data-filter="tots" type="button">Tots els productes</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link text-dark boto-filtre" data-filter="llenceria" type="button">Llenceria</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link text-dark boto-filtre" data-filter="pijames" type="button">Pijames</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link text-dark boto-filtre" data-filter="bany" type="button">Bany i Bàsics</button>
+            </li>
+        </ul>
+
+        <!-- QUADRÍCULA DE PRODUCTES (GRID SYSTEM) -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="contenidor-productes">
+            
+            <!-- Producte 1 (Llenceria - Guia Vipselene) -->
+            <div class="col item-producte" data-categoria="llenceria">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://images.asos-media.com/products/tanga-burdeos-de-encaje-y-malla-de-ivory-rose/20809966-1-bordeaux?$n_640w$&wid=513&fit=constrain" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Conjunt Encaix">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h6 class="card-title fw-bold mt-2">Conjunt d'encaix bordeus</h6>
+                        <p class="card-text text-muted mb-3">Talles: 85B - 110E</p>
+                        <h5 class="fw-bold mb-3 text-dark">35,00 €</h5>
+                        <a href="https://www.vipselene.es/pages/guia-de-tallas" target="_blank" class="btn btn-outline-dark mt-auto">Consultar talla</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producte 2 (Pijames - Guia Bergfreunde) -->
+            <div class="col item-producte" data-categoria="pijames">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://ysabelmora.com/cdn/shop/files/12011018-1-pijama-camisero-estampado-floral.jpg?v=1757945417&width=2500" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Pijama d'hivern">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h6 class="card-title fw-bold mt-2">Pijama de cotó estampat</h6>
+                        <p class="card-text text-muted mb-3">Talles: S - 3XL</p>
+                        <h5 class="fw-bold mb-3 text-dark">28,50 €</h5>
+                        <a href="https://www.bergfreunde.es/ale-guia-de-tallas/" target="_blank" class="btn btn-outline-dark mt-auto">Consultar talla</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producte 3 (Llenceria - Guia Vipselene) -->
+            <div class="col item-producte" data-categoria="llenceria">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://corseteriasingular.com/41352/sujetador-reductor-basico-de-confort-twin-de-rosa-faia.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Subjectador Bàsic">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h6 class="card-title fw-bold mt-2">Subjectador reductor bàsic</h6>
+                        <p class="card-text text-muted mb-3">Talles: 90C - 120F</p>
+                        <h5 class="fw-bold mb-3 text-dark">22,00 €</h5>
+                        <a href="https://www.vipselene.es/pages/guia-de-tallas" target="_blank" class="btn btn-outline-dark mt-auto">Consultar talla</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producte 4 (Bany i Bàsics - Guia Bergfreunde) -->
+            <div class="col item-producte" data-categoria="bany">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://underwearessentials.es/cdn/shop/files/6_1829fd41-e438-4d88-b8db-76a57afd9619.jpg?v=1741169226&width=1946" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Calçotets">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h6 class="card-title fw-bold mt-2">Pack 3 Calçotets bòxer</h6>
+                        <p class="card-text text-muted mb-3">Talles: M - XXL</p>
+                        <h5 class="fw-bold mb-3 text-dark">18,00 €</h5>
+                        <a href="https://www.bergfreunde.es/ale-guia-de-tallas/" target="_blank" class="btn btn-outline-dark mt-auto">Consultar talla</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producte 5 (Pijames - Guia Bergfreunde) -->
+            <div class="col item-producte" data-categoria="pijames">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://www.varelaintimo.com/images/productos/Bata-MuyDeMI-Polar-Coralina-Gris-Calentita-Regalo-Varelaintimo-Ourense-01.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Bata coralina">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h6 class="card-title fw-bold mt-2">Bata polar coral·lina</h6>
+                        <p class="card-text text-muted mb-3">Talles: M - 4XL</p>
+                        <h5 class="fw-bold mb-3 text-dark">32,00 €</h5>
+                        <a href="https://www.bergfreunde.es/ale-guia-de-tallas/" target="_blank" class="btn btn-outline-dark mt-auto">Consultar talla</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producte 6 (Bany i Bàsics - Guia Bergfreunde) -->
+            <div class="col item-producte" data-categoria="bany">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://www.calzedonia.com/dw/image/v2/BJHW_PRD/on/demandware.static/-/Sites-CAL_EC_COM/default/dw89db5599/images/0IC1908241E-FI.jpg?sfrm=jpeg&sw=1920&q=80" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Banyador">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h6 class="card-title fw-bold mt-2">Banyador sencer control</h6>
+                        <p class="card-text text-muted mb-3">Talles: 40 - 54</p>
+                        <h5 class="fw-bold mb-3 text-dark">45,00 €</h5>
+                        <a href="https://www.bergfreunde.es/ale-guia-de-tallas/" target="_blank" class="btn btn-outline-dark mt-auto">Consultar talla</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producte 7 (Llenceria - Guia Bergfreunde) -->
+            <div class="col item-producte" data-categoria="llenceria">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://es.victoriassecret.com/p/1520x2026/png/zz/25/08/14/02/112711707C5W_OM_F.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Picardies Dona">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h6 class="card-title fw-bold mt-2">Picardies Dona</h6>
+                        <p class="card-text text-muted mb-3">Talles: S - XL</p>
+                        <h5 class="fw-bold mb-3 text-dark">40,00 €</h5>
+                        <!-- Com que no és el conjunt bordeus ni el reductor, apliquem la guia de Bergfreunde -->
+                        <a href="https://www.bergfreunde.es/ale-guia-de-tallas/" target="_blank" class="btn btn-outline-dark mt-auto">Consultar talla</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producte 8 (Bany i Bàsics - Guia Bergfreunde) -->
+            <div class="col item-producte" data-categoria="bany">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://mivestidorazul.es/10920-large_default/pack-4-pares-calcetines-pcelisa-negro.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="PACK 4 Mitjons bàsics Home">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h6 class="card-title fw-bold mt-2">PACK 4 Mitjons bàsics Home</h6>
+                        <p class="card-text text-muted mb-3">Talles: 39 - 46</p>
+                        <h5 class="fw-bold mb-3 text-dark">12,00 €</h5>
+                        <a href="https://www.bergfreunde.es/ale-guia-de-tallas/" target="_blank" class="btn btn-outline-dark mt-auto">Consultar talla</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producte 9 (Bany i Bàsics - Guia Bergfreunde) -->
+            <div class="col item-producte" data-categoria="bany">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://www.calzedonia.com/dw/image/v2/BJHW_PRD/on/demandware.static/-/Sites-CAL_EC_COM/default/dw9b8c945a/images/LIC036009-FI.jpg?sfrm=jpeg&sw=1920&q=80" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Mitges Dona Color Carn">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h6 class="card-title fw-bold mt-2">Mitges Dona Color Carn</h6>
+                        <p class="card-text text-muted mb-3">Talles: 1 - 5</p>
+                        <h5 class="fw-bold mb-3 text-dark">10,00 €</h5>
+                        <a href="https://www.bergfreunde.es/ale-guia-de-tallas/" target="_blank" class="btn btn-outline-dark mt-auto">Consultar talla</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producte 10 (Pijames - Guia Bergfreunde) -->
+            <div class="col item-producte" data-categoria="pijames">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://tucorseteria.com/cdn/shop/products/PIJAMAHOMBRELOISJUNGLE54510-02.jpg?v=1593065125&width=1445" class="card-img-top" style="height: 250px; object-fit: cover;" alt="PIJAMA Home Estiu">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h6 class="card-title fw-bold mt-2">PIJAMA Home Estiu</h6>
+                        <p class="card-text text-muted mb-3">Talles: M - XXL</p>
+                        <h5 class="fw-bold mb-3 text-dark">25,00 €</h5>
+                        <a href="https://www.bergfreunde.es/ale-guia-de-tallas/" target="_blank" class="btn btn-outline-dark mt-auto">Consultar talla</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- PEU DE PÀGINA (FOOTER) -->
+    <footer class="text-center text-white py-4 mt-5" style="background-color: #343a40;">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 Les coses de Marina. Tots els drets reservats.</p>
+            <p class="mb-3 text-muted small">Carrer de la Cort (Exemple), Valls | Alt Camp</p>
+            
+            <div>
+                <a href="#" class="text-white text-decoration-none mx-2 border-bottom border-secondary">Torna a dalt</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dependències JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SCRIPT DE FILTRATGE DEL CATÀLEG -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const botonsFiltre = document.querySelectorAll(".boto-filtre");
+            const productes = document.querySelectorAll(".item-producte");
+
+            botonsFiltre.forEach(boto => {
+                boto.addEventListener("click", function() {
+                    botonsFiltre.forEach(b => {
+                        b.classList.remove("active");
+                        b.classList.add("text-dark");
+                    });
+
+                    this.classList.add("active");
+                    this.classList.remove("text-dark");
+
+                    const filtre = this.getAttribute("data-filter");
+
+                    productes.forEach(producte => {
+                        if (filtre === "tots" || producte.getAttribute("data-categoria") === filtre) {
+                            producte.classList.remove("d-none");
+                        } else {
+                            producte.classList.add("d-none");
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
