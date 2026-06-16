@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. TIPOGRAFIA I FONS GLOBAL
-   ========================================================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
 
 body {
@@ -9,10 +7,7 @@ body {
     color: #333333;
 }
 
-/* ==========================================================================
-   2. ANIMACIÓ D'ENTRADA (FADE IN)
-   ========================================================================== */
-/* Fa que el contingut aparegui suaument de baix cap a dalt en carregar la pàgina */
+
 header, section, main, footer {
     animation: fadeIn 0.8s ease-out forwards;
 }
@@ -28,9 +23,7 @@ header, section, main, footer {
     }
 }
 
-/* ==========================================================================
-   3. BARRA DE NAVEGACIÓ (EFECTES HOVER)
-   ========================================================================== */
+
 .navbar-nav .nav-link {
     transition: color 0.3s ease, transform 0.3s ease;
     position: relative;
@@ -41,21 +34,19 @@ header, section, main, footer {
     transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   4. BOTONS I TARGETES (SOMBRES DINÀMIQUES)
-   ========================================================================== */
+
 .btn {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     border-radius: 8px;
 }
 
-/* Efecte d'elevació tipus "Apple" en passar el ratolí */
+
 .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Les targetes (com la del formulari o mapes) també s'eleven una mica */
+
 .shadow-sm {
     transition: box-shadow 0.3s ease;
 }
@@ -64,10 +55,7 @@ header, section, main, footer {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05) !important;
 }
 
-/* ==========================================================================
-   5. FORMULARIS (FOCUS)
-   ========================================================================== */
-/* Quan l'usuari clica per escriure, la vora canvia al color corporatiu */
+
 .form-control:focus {
     border-color: #8b0000;
     box-shadow: 0 0 0 0.25rem rgba(139, 0, 0, 0.15);
