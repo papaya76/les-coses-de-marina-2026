@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicació | Les coses de Marina</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top" style="background-color: #fdfbf7;">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.png" alt="Logo Les coses de Marina" height="50">
+                <span class="ms-2 fw-bold" style="color: #8b0000;">Les coses de Marina</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#NavegacioPrincipal" aria-controls="NavegacioPrincipal" aria-expanded="false" aria-label="Desplegar navegació">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="NavegacioPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inici</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catàleg</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">La botiga</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" style="color: #8b0000;" href="ubicacion.html">Ubicació</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacte</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container mt-5 text-center">
+        <h1 class="display-5 fw-bold" style="color: #8b0000;">On som?</h1>
+        <p class="lead text-muted">Troba'ns fàcilment al centre de Valls. T'hi esperem!</p>
+    </header>
+
+    <section class="container mt-5">
+        <div class="row text-center mb-5">
+            <div class="col-md-6 mb-4">
+                <h4 class="fw-bold" style="color: #d4af37;">📍 Adreça</h4>
+                <p class="text-muted mt-2">
+                    Carrer Jaume Huguet, 17<br>
+                    43800 Valls, Alt Camp<br>
+                    Tarragona
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h4 class="fw-bold" style="color: #d4af37;">🕒 Horari d'obertura</h4>
+                <p class="text-muted mt-2">
+                    <strong>Dilluns a Dissabte:</strong> 10:00 - 13:30 / 17:00 - 20:30<br>
+                    <strong>Diumenge:</strong> Tancat
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white border-bottom-0 pt-4 pb-0 text-center">
+                <h3 class="fw-bold" style="color: #8b0000;">Mapa d'accessibilitat local</h3>
+                <p class="text-muted small">Consulta els aparcaments propers i com arribar a la botiga.</p>
+            </div>
+            <div class="card-body p-0">
+                <div class="position-relative" style="background-color: #e9ecef; min-height: 500px;">
+                   <iframe 
+                        width="100%" 
+                        height="500px" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        marginheight="0" 
+                        marginwidth="0" 
+                        src="./maps/mapa-valls/index.html"
+                        style="position: absolute; top: 0; left: 0;">
+                    </iframe>
+                    <div class="d-flex w-100 h-100 justify-content-center align-items-center position-absolute" style="z-index: -1;">
+                        <p class="text-muted"><i class="fw-bold">Nota:</i> El mapa de Valls es carregarà aquí quan s'exporti des de QGIS.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center text-white py-4 mt-5" style="background-color: #343a40;">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 Les coses de Marina. Tots els drets reservats.</p>
+            <p class="mb-3 text-muted small">Carrer Jaume Huguet, 17, Valls (43800) | Alt Camp</p>
+            <div>
+                <a href="#" class="text-white text-decoration-none mx-2 border-bottom border-secondary">Torna a dalt</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

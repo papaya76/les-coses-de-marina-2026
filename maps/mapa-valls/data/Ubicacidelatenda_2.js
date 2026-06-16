@@ -1,0 +1,1 @@
+var json_Ubicacidelatenda_2 = {"type":"FeatureCollection","name":"Ubicacidelatenda_2","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","nombre":"Les Coses De Marina"},"geometry":{"type":"Point","coordinates":[1.251085294318063,41.286685968589644]}}]}
