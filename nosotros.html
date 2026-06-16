@@ -2,18 +2,14 @@
 <html lang="ca">
 <head>
     <meta charset="UTF-8">
-    <!-- Etiqueta indispensable per garantir el comportament responsiu en dispositius mòbils -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Botiga | Les coses de Marina</title>
 
-    <!-- Integració del framework CSS Bootstrap 5 mitjançant CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Enllaç a la fulla d'estils en cascada (CSS) personalitzada -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- BARRA DE NAVEGACIÓ RESPONSIU I FIXA -->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top" style="background-color: #fdfbf7;">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -38,7 +34,6 @@
         </div>
     </nav>
 
-    <!-- SECCIÓ: LA NOSTRA HISTÒRIA -->
     <section class="container mt-5 pt-4">
         <div class="row align-items-center">
             <!-- Imatge representativa (modifica la ruta quan tinguis la foto real) -->
@@ -46,7 +41,6 @@
                 <img src="images/labotiga-1.png" class="img-fluid rounded shadow" alt="Façana de Les coses de Marina">
             </div>
             
-            <!-- Text descriptiu i relat corporatiu -->
             <div class="col-md-6 px-md-5">
                 <h2 class="display-5 fw-bold mb-4" style="color: #8b0000;">Més que una botiga</h2>
                 <p class="lead text-dark">A Les coses de Marina creiem que la moda íntima ha de ser un espai de confort i confiança per a tothom, sense importar la talla o el gènere.</p>
@@ -55,21 +49,17 @@
         </div>
     </section>
 
-    <!-- SECCIÓ: MAPA DE PROVEÏDORS (INTEGRACIÓ WEBGIS) -->
-    <!-- Justificació territorial i de sostenibilitat per a l'assignatura -->
     <section class="container my-5 py-5 border-top">
         <div class="text-center mb-5">
             <h2 class="fw-bold" style="color: #8b0000;">D'on ve la nostra roba?</h2>
             <p class="text-muted mx-auto" style="max-width: 800px;">Un consum responsable comença per conèixer l'origen. Com a part del nostre compromís amb la sostenibilitat, hem cartografiat la xarxa dels nostres proveïdors principals. Prioritzem marques amb producció ètica i de proximitat. Explora el mapa per conèixer els punts de fabricació de les nostres col·leccions.</p>
         </div>
         
-        <!-- Contenidor responsiu per a l'iframe del mapa -->
         <div class="row justify-content-center">
             <div class="col-12">
                 <!-- S'aplica un fons gris i una alçada mínima temporal per visualitzar l'espai mentre no hi ha mapa -->
                 <div class="shadow-sm border rounded overflow-hidden position-relative" style="background-color: #e9ecef; min-height: 600px;">
                     
-                    <!-- ESTRUCTURA IFRAME SEGONS DIRECTRIUS TÈCNIQUES -->
                     <iframe 
                         width="100%" 
                         height="600px" 
@@ -81,7 +71,6 @@
                         style="position: absolute; top: 0; left: 0;">
                     </iframe>
                     
-                    <!-- Missatge d'avís temporal (Desapareixerà quan l'iframe carregui el mapa real) -->
                     <div class="d-flex w-100 h-100 justify-content-center align-items-center position-absolute" style="z-index: -1;">
                         <p class="text-muted"><i class="fw-bold">Nota per al desenvolupament:</i> Aquí es carregarà el mapa Leaflet de proveïdors exportat amb qgis2web.</p>
                     </div>
@@ -90,7 +79,6 @@
         </div>
     </section>
 
-    <!-- PEU DE PÀGINA (FOOTER) -->
     <footer class="text-center text-white py-4 mt-5" style="background-color: #343a40;">
         <div class="container">
             <p class="mb-1">&copy; 2026 Les coses de Marina. Tots els drets reservats.</p>
@@ -102,7 +90,6 @@
         </div>
     </footer>
 
-    <!-- Dependències JavaScript de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
